@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.post("/login", (req, res) => {
+router.get("/login", (req, res) => {
   console.log("Just got a request!");
   res.json({ status: 200, message: "OK", data: { title: "Login", description: "Halaman login..." } });
 });
