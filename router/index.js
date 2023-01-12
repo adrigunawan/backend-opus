@@ -4,15 +4,15 @@ const router = express.Router();
 
 router.get("/login", (req, res) => {
   console.log("Just got a request!");
-  res.send("Halaman Login");
+  res.json({ status: 200, message: "OK", data: { title: "Login", description: "Halaman login..." } });
 });
 router.get("/", (req, res) => {
   console.log("Just got a request!");
-  res.send("Halaman Homepage");
+  res.send({ status: 200, message: "OK", data: { title: "Homepage", description: "Halaman homepage" } });
 });
 router.get("/register", (req, res) => {
   console.log("Just got a request!");
-  res.send("Halaman Register");
+  res.send({ status: 200, message: "OK", data: { title: "Register", description: "Halaman Register" } });
 });
 
 module.exports = router;
